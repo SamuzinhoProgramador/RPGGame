@@ -34,23 +34,23 @@ class Main:
             if class_type == 1:
                 self.player = Character(inserted_name, "Warrior", 150, 0, 0)
                 self.player.inventory.extend(["sword", "health potion"])
-                self.player.attacks.append(Attack("sword", 8, False, False))
-                self.player.attacks.append(Attack("punch", 4, False, False))
+                self.player.attacks.append(Attack(0, 1,"sword", 8, False, False))
+                self.player.attacks.append(Attack(0, 1, "punch", 4, False, False))
                 self.valid_answer = True
             elif class_type == 2:
                 self.player = Character(inserted_name, "Wizard", 100, 0, 100)
                 self.player.inventory.append("staff")
-                self.player.attacks.append(Attack("fire ball", 12, True, False))
+                self.player.attacks.append(Attack(30, 1, "fire ball", 12, True, False))
                 self.valid_answer = True
             elif class_type == 3:
                 self.player = Character(inserted_name, "Ranger", 130, 8, 0)
                 self.player.inventory.append("bow")
-                self.player.attacks.append(Attack("arrow", 6, False, True))
+                self.player.attacks.append(Attack(0, 1, "arrow", 6, False, True))
                 self.valid_answer = True
             elif class_type == 4:
                 self.player = Character(inserted_name, "Rogue", 110, 12, 0)
                 self.player.inventory.append("dagger")
-                self.player.attacks.append(Attack("dagger", 4, False, False))
+                self.player.attacks.append(Attack(0, 1, "dagger", 4, False, False))
                 self.valid_answer = True
             else:
                 print("Invalid class type. Please type 1, 2, 3, or 4.")

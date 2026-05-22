@@ -29,7 +29,6 @@ class Main:
             
             class_type = int(class_type_input)
 
-            # Substituindo o switch/case por if/elif/else (padrão do Python)
             if class_type == 1:
                 self.player = Character(inserted_name, "Warrior", 150, 0, 0)
                 self.player.inventory.extend(["sword", "health potion"])
@@ -58,7 +57,6 @@ class Main:
         print(self.player) 
         print(f"Inventory: {self.player.inventory}")
         
-        # Formatando a lista de ataques para usar o __str__ de cada ataque
         attacks_str = ", ".join([str(attack) for attack in self.player.attacks])
         print(f"Character attacks: [{attacks_str}]")
 
@@ -93,7 +91,6 @@ class Main:
             else:
                 print("Invalid option. Choose 1, 2, or 3.")
 
-# Ponto de entrada clássico do Python para rodar o sistema
 if __name__ == "__main__":
     game = Main()
     game.start_game()

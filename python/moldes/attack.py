@@ -7,6 +7,5 @@ class Attack:
         self.is_magic = is_magic
         self.long_range = long_range
 
-    # O método __str__ substitui o toString() do Java
     def __str__(self):
         return f"{self.attack_name} (D{self.attack_dice})"

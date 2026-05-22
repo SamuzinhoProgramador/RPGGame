@@ -1,4 +1,4 @@
-import random
+import random as rd
 from moldes.character import Character
 from moldes.attack import Attack
 
@@ -13,7 +13,7 @@ class Main:
 
     def roll_dice(self, dice_sides: int) -> int:
         # Substitui o ThreadLocalRandom do Java
-        return random.randint(1, dice_sides)
+        return rd.randint(1, dice_sides)
 
     def create_character(self):
         inserted_name = input("Enter the name of your character:\n")
